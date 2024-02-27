@@ -1,0 +1,100 @@
+.first{
+    display: flex;
+}
+
+.section__first {
+    text-align: center;
+    max-width: 1000px; /* Настройте максимальную ширину, если нужно */
+    margin: 250px auto 500px; /* Чтобы выровнять по центру по горизонтали */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* Чтобы сделать секцию по высоте равной всему экрану */
+    background-color: #282828;
+    border-radius: 20px;
+}
+
+.section__first_title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(31, 180, 180);
+    font-size: 2.5vmax;
+    background-color: #2AA5A0;
+    color: #3500D3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section__first__desc {
+    font-size: 3em;
+    line-height: 2em;
+    color: #fff;
+    font-size: 1vmax;
+}
+
+.section__first__photo {
+    position: absolute;
+    top: 580px; /* Измените это значение в соответствии с вашими требованиями */
+    right: -250px; /* Измените это значение в соответствии с вашими требованиями */
+}
+
+.section__first__photo img {
+    width: 25%;
+    height: auto;
+    max-width: 100%;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate {
+    animation: rotate 2s linear infinite;
+  }
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: #0C0032;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.5s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0e0c0c;
+    transform: scale(1.01);
+}
+
+.button-fourth {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #725151, #1b1919);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1,5em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.2s ease;
+}
+
+.button-fourth:hover {
+    background: linear-gradient(90deg, rgba(53, 43, 43, 0.8), rgba(75, 64, 64, 0.8));
+    transform: scale(1.05);
+}

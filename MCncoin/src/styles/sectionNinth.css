@@ -1,0 +1,18 @@
+.ninth {
+    background-color: #3498db; /* Цвет фона может быть настроен под ваш дизайн */
+    color: #fff;
+    padding: 50px 0;
+    margin: 500px auto 0;
+}
+
+.section__ninth {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.motivation__text {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+}
