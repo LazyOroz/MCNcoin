@@ -1,0 +1,50 @@
+.fifth{
+    margin: 500px auto 0;
+}
+
+.section__fifth {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.plan-section {
+    width: 20%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #2b1818;
+    border-radius: 8px;
+    margin: 35px;
+    justify-content: center;
+}
+
+.plan-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.plan-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+.plan-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.plan-section li {
+    margin-bottom: 8px;
+}
+
+/* Медиа-запрос для более узких экранов */
+@media (max-width: 768px) {
+    .section__fifth {
+        flex-direction: column;
+    }
+
+    .plan-section {
+        width: 100%;
+    }
+}

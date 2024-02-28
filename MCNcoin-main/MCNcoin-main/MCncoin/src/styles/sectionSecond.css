@@ -1,0 +1,48 @@
+.second {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(90deg, #161313, #3a2323, 0);
+}
+
+.section__second {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section__second__title {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 2.5vmax;
+    opacity: 0.8; 
+}
+
+.section__second__desc {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+    align-items: center;
+    font-size: 1vmax;
+    opacity: 0.9; 
+}
+
+/* Добавьте стили для адаптивности, если необходимо */
+@media (max-width: 768px) {
+    .section__second {
+        padding: 10px;
+    }
+
+    .section__second__title {
+        font-size: 20px;
+    }
+
+    .section__second__desc {
+        font-size: 14px;
+    }
+}

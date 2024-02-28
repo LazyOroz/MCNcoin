@@ -1,0 +1,114 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-image: linear-gradient(90deg, #02063a, #134999, #020330, #000);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 0;
+    width: 100%;
+    margin: 300px auto 0;
+}
+
+.footer__container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__section {
+    flex: 1;
+    margin: 0 5px; /* Уменьшил отступы между секциями */
+    box-sizing: border-box;
+}
+
+.footer__section a {
+    text-decoration: none; /* Удаляем подчеркивание ссылок */
+    display: inline-block; /* Делаем иконки блочными элементами для настройки размеров */
+}
+
+.footer__section a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #3498db; /* Цвет линии, замените на ваш желаемый цвет */
+    transition: width 0.3s; /* Добавим анимацию при появлении линии */
+}
+
+.footer__section a:hover::after {
+    width: 100%; /* Линия будет полной при наведении курсора */
+}
+
+/* Увеличенные размеры иконок */
+.footer__section .icon-instagram {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    color: #fff;
+    font-size: 24px;
+    /* Дополнительные стили для Instagram */
+}
+
+.footer__section .icon-whatsapp {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    color: #fff;
+    font-size: 24px;
+    /* Дополнительные стили для WhatsApp */
+}
+
+.footer__section .icon-telegram {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    color: #fff;
+    font-size: 24px;        
+    /* Дополнительные стили для Telegram */
+}
+
+.footer__title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__links li {
+    margin-bottom: 5px;
+}
+
+.footer__links a {
+    color: #fff;
+    text-decoration: none;
+    display: block; /* Сделал ссылки блочными элементами для более плотного расположения */
+    padding: 5px 0; /* Добавил внутренний отступ для ссылок */
+}
+
+.subscribe-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 5px;
+}
+
+.footer__bottom {
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer__bottom p {
+    margin: 0;
+    font-size: 0.8em;
+}
