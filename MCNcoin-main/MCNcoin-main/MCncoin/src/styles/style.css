@@ -25,4 +25,5 @@ body {
     background-position: center; /* чтобы изображение оставалось по центру */
     background-repeat: no-repeat; /* чтобы изображение не повторялось */
     position: relative;
+    cursor: url('../assets/1.jpg'), auto;
 }
