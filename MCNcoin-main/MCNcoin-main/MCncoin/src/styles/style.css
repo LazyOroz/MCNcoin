@@ -24,6 +24,7 @@ body {
     background-size: cover; /* чтобы изображение заполняло всю область фона без искажений */
     background-position: center; /* чтобы изображение оставалось по центру */
     background-repeat: no-repeat; /* чтобы изображение не повторялось */
-    position: relative;
-    cursor: url('../assets/1.jpg'), auto;
+    cursor: url('/MCNcoin-main/MCncoin/src/assets/1-removebg-preview.png'), auto;
+    transition: background 0.5s ease;
 }
+
