@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Круговая диаграмма</title>
+<!-- Подключаем библиотеку Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    /* Стили для контейнера диаграммы */
+    #chart-container {
+        width: 400px; /* Измените размер по вашему усмотрению */
+        height: 400px; /* Измените размер по вашему усмотрению */
+        margin: auto; /* Чтобы центрировать */
+    }
+</style>
+</head>
+<body>
+<!-- Создаем контейнер для диаграммы -->
+<div id="chart-container">
+    <!-- Создаем элемент canvas для отображения графика -->
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+// Получаем контекст canvas
+var ctx = document.getElementById('myChart').getContext('2d');
+
+// Создаем данные для диаграммы
+var data = {
+    labels: ['Airdrop 0.5%', 'ICO 2.5%', 'Благотворительность 5%', 'Реферальная программа 7%', 'Маркетинг 15%', 'Ставка 20%', 'Резервной фонд 25%', 'Пул ликвидности 20%', 'Разработчики 5%'],
+    datasets: [{
+        label: 'Мой график',
+        data: [0.5, 2.5, 5, 7, 15, 20, 25, 20, 5],
+        backgroundColor: [
+            'red',          // Airdrop 0.5%
+            'lightblue',    // ICO 2.5%
+            'blue',         // Благотворительность 5%
+            'pink',         // Реферальная программа 7%
+            'lightpink',    // Маркетинг 15%
+            'darkred',      // Ставка 20%
+            'orange',       // Резервной фонд 25%
+            'white',        // Пул ликвидности 20%
+            'green'         // Разработчики 5%
+        ],
+        borderColor: [
+            'red', 'lightblue', 'blue', 'pink', 'lightpink', 'darkred', 'orange', 'white', 'green'
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Создаем круговую диаграмму
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: data,
+    options: {
+        // Параметры диаграммы, например, заголовок
+        title: {
+            display: true,
+            text: 'Распределение ресурсов'
+        }
+    }
+});
+</script>
+</body>
+</html>
