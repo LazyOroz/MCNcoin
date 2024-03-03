@@ -6,13 +6,15 @@
     display: flex;
     justify-content: center;
     padding: 30px 0;
+    overflow-x: auto;
+    font-family: Roboto, sans-serif;
 }
 
 .plan-section {
     width: 20%;
-    background-color: #f9f9f9;
+    background-color: #b700ff0c;
     padding: 20px;
-    border: 1px solid #2b1818;
+    border: 1px solid #ecd500;
     border-radius: 8px;
     margin: 35px;
     justify-content: center;
@@ -20,18 +22,19 @@
 
 .plan-section h2 {
     font-size: 20px;
-    color: #333;
+    color: rgb(224, 198, 248);
     margin-bottom: 10px;
 }
 
 .plan-section p {
     font-size: 16px;
-    color: #555;
+    color:  rgb(224, 198, 248);
 }
 
 .plan-section ul {
     list-style-type: none;
     padding: 0;
+    color: rgb(224, 198, 248);
 }
 
 .plan-section li {
@@ -48,3 +51,5 @@
         width: 100%;
     }
 }
+
+

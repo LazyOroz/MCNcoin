@@ -2,19 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+
+    <meta name="viewport" content="width=1024">
+    
     <title>MCN COIN</title>
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/fontello-de982d49/css/fontello.css">
-    <script src="/MCNcoin-main/MCncoin/src/code/sectionThird.js"></script>    
+    <script src="/MCNcoin-main/MCncoin/src/code/sectionThird.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="logo">
             <img src="src/assets/header_logo.png" alt="mcncoin">
         </div>
+        <div class="header__phone">
+            <div class="menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu" id="menu">
+                <a href="#">Договор</a>
+                <a href="#">Белая бумага</a>
+                <a href="#">О нас</a>
+                <a href="#">Преимущества</a>
+                <a href="#">Контакты</a>
+                <a href="#">Дисклеймер</a>
+            </div>
+        </div>
         <nav>
-            <ul>
+            <ul class="menu-items">
                 <li><a href="#home">Договор</a></li>
                 <li><a href="#news">Белая бумага</a></li>
                 <li><a href="#strategies">О нас</a></li>
@@ -23,12 +48,46 @@
                 <li><a href="#contact">Дисклеймер</a></li>
             </ul>
         </nav>
-        <div class="language-selector">
-            <select id="language" name="language">
-                <option value="ru">Русский</option>
-                <option value="en">English</option>
-            </select>
-        </div>
+        <div class="header_container">
+            <p class="header_p">RU</p>
+            <label class="switch">
+                <input class="switch__input" type="checkbox" role="switch">
+                <span class="switch__base-outer"></span>
+                <span class="switch__base-inner"></span>
+                <svg class="switch__base-neon" viewBox="0 0 40 24" width="40px" height="24px">
+                <defs>
+                    <filter id="switch-glow">
+                    <feGaussianBlur result="coloredBlur" stddeviation="1"></feGaussianBlur>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                    </filter>
+                    <linearGradient id="switch-gradient1" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="hsl(var(--on-hue1),90%,70%)" />
+                    <stop offset="100%" stop-color="hsl(var(--on-hue2),90%,70%)" />
+                    </linearGradient>
+                    <linearGradient id="switch-gradient2" x1="0.7" y1="0" x2="0.3" y2="1">
+                    <stop offset="25%" stop-color="hsla(var(--on-hue1),90%,70%,0)" />
+                    <stop offset="50%" stop-color="hsla(var(--on-hue1),90%,70%,0.3)" />
+                    <stop offset="100%" stop-color="hsla(var(--on-hue2),90%,70%,0.3)" />
+                    </linearGradient>
+                </defs>
+                <path fill="none" filter="url(#switch-glow)" stroke="url(#switch-gradient1)" stroke-width="1" stroke-dasharray="0 104.26 0" stroke-dashoffset="0.01" stroke-linecap="round" d="m.5,12C.5,5.649,5.649.5,12,.5h16c6.351,0,11.5,5.149,11.5,11.5s-5.149,11.5-11.5,11.5H12C5.649,23.5.5,18.351.5,12Z"/>
+                </svg>
+                <span class="switch__knob-shadow"></span>
+                <span class="switch__knob-container">
+                <span class="switch__knob">
+                    <svg class="switch__knob-neon" viewBox="0 0 48 48" width="48px" height="48px">
+                    <circle fill="none" stroke="url(#switch-gradient2)" stroke-dasharray="0 90.32 0 54.19" stroke-linecap="round" stroke-width="1" r="23" cx="24" cy="24" transform="rotate(-112.5,24,24)" />
+                    </svg>	
+                </span>
+                </span>
+                <span class="switch__text" lang="en">Power</span>
+                <span class="switch__text" lang="ru">Питание</span>
+            </label>
+            <p class="header_p">EN</p>
+        </div> 
     </header>
     
     <section class="first">
@@ -67,8 +126,8 @@
         </div>
     </section>
 
-    <section class="third">
-        <div class="section__third">
+    <section class="third" id="prem">
+        <div class="section__third" >
             <div class="buttons-container">
                 <button class="toggle-button active" data-target="advantagesBlock">Преимущества</button>
                 <button class="toggle-button" data-target="usageBlock">Как использовать</button>
@@ -121,7 +180,7 @@
             </div>
             
     
-            <div id="usageBlock" class="content-block">
+            <div id="usageBlock" class="content-block" id="usage">
                 <h1 class="section__third__title">Как использовать MCN</h1>
                 <div class="section__third__desc">
                     <div>
@@ -171,32 +230,37 @@
     </section>   
     
     <section class="fourth">
-        <h2 class="projects__title">Наши проекты</h2>
+        <h2 class="projects__title" id="prog">Наши проекты</h2>
 
         <div class="section__fourth">
-            <div class="project">
+            <div class="project project_1">
                 <h3 class="project__title">Игры Кочевников</h3>
-                <p class="project__description">
-                    <h1>Игра "Кочевники": Уникальный опыт из Кыргызстана</h1>
-                    <p>Добро пожаловать в мир уникальной игры "Кочевники" – проекта, созданного впервые в Кыргызстане!</p>
-
-                    <h2>Описание игры:</h2>
-                    <p>"Кочевники" – это увлекательная онлайн-игра, в которой вы воплощаете себя в роли кочевого народа, строя свою империю, исследуя новые территории, торгуя и вступая в эпические сражения.</p>
-
-                    <h2>Уникальные особенности "Кочевников":</h2>
-                    <ul>
-                        <li>**Этнический фольклор:** Игра воплощает в себе богатое культурное наследие Кыргызстана, предоставляя игрокам уникальный опыт, основанный на местных традициях и легендах.</li>
-                        <li>**Экономическая стратегия:** Постройте и развивайте свою кочевую империю, управляйте ресурсами, торгуйте и создавайте процветающую цивилизацию.</li>
-                        <li>**Сражения и союзы:** Участвуйте в захватывающих сражениях с другими игроками, формируйте союзы и объединяйтесь для достижения общих целей.</li>
-                        <li>**Исследование мира:** Открывайте новые территории, исследуйте загадочные места и раскрывайте секреты древних цивилизаций.</li>
-                    </ul>
-
-                    <h2>Почему "Кочевники" уникальны?</h2>
-                    <p>Эта игра стала первым опытом в жанре от создателей из Кыргызстана, предлагая игрокам уникальное сочетание культурного контекста и захватывающего игрового процесса. Присоединяйтесь к нам в приключении, где история и традиции переплетаются с виртуальным миром!</p>
-                </p>
+                
+                <div class="project__description">
+                    <h1>Добро пожаловать в "Кочевники": Уникальный Опыт Кыргызстана!</h1>
+                    
+                    <p>Многогранная игровая платформа, вдохновленная культурным наследием Кыргызстана, представляет "Кочевники" – увлекательный мир народных игр, воплощающий виртуальное переживание кочевого образа жизни.</p>
+                
+                    <h2>Основные Характеристики:</h2>
+                    
+                    <p><strong>Криптовалютный Донат:</strong> Внесите вклад в развитие, используя токен MCN для удобства и анонимности финансовых транзакций.</p>
+                    
+                    <p><strong>Разнообразие Народных Игр:</strong> Откройте богатое многообразие игр, включая ордо, альчики и другие, представляющие культуру кыргызского народа.</p>
+                    
+                    <p><strong>Экономические Возможности:</strong> Используйте MCN для приобретения лошадей и других элементов, стройте свою кочевую империю, развивайтесь в экосистеме игры.</p>
+                    
+                    <p><strong>Викторины и Игровые Моменты:</strong> Проверьте свои знания, играйте в викторины, зарабатывайте ресурсы и привилегии.</p>
+                    
+                    <p><strong>Мультиплатформенность:</strong> Доступно на ПК, телефонах и игровых консолях, предоставляя свободу выбора игрокам.</p>
+                    
+                    <h2>Почему "Кочевники" Уникальны?</h2>
+                    
+                    <p>"Кочевники" предлагают уникальное взаимодействие с культурным наследием через народные игры. Ваш вклад поможет создать виртуальную кочевую общину с захватывающими возможностями на всех платформах!</p>
+                </div>
+                
             </div>
 
-            <div class="project">
+            <div class="project project_2">
                 <h3 class="project__title">Маркетплейс MCN</h3>
                 <p class="project__description">
                     <h1>Маркетплейс: Мировой масштаб с использованием токенов MCN</h1>
@@ -207,10 +271,10 @@
 
                     <h2>Особенности маркетплейса:</h2>
                     <ul>
-                        <li>**Глобальное сообщество:** Маркетплейс объединяет продавцов и покупателей со всех уголков мира, создавая разнообразное и динамичное сообщество.</li>
-                        <li>**Безопасные транзакции:** Оплата производится с использованием токенов MCN, обеспечивая быстрые и безопасные транзакции, не зависящие от географических ограничений.</li>
-                        <li>**Разнообразие товаров и услуг:** На маркетплейсе представлен широкий ассортимент товаров и услуг, от ручной работы до цифровых продуктов.</li>
-                        <li>**Интеграция технологий:** Использование токенов MCN обеспечивает удобство онлайн-платежей и интеграцию современных технологий.</li>
+                        <li><strong>Глобальное сообщество:</strong> Маркетплейс объединяет продавцов и покупателей со всех уголков мира, создавая разнообразное и динамичное сообщество.</li>
+                        <li><strong>Безопасные транзакции:</strong> Оплата производится с использованием токенов MCN, обеспечивая быстрые и безопасные транзакции, не зависящие от географических ограничений.</li>
+                        <li><strong>Разнообразие товаров и услуг:</strong> На маркетплейсе представлен широкий ассортимент товаров и услуг, от ручной работы до цифровых продуктов.</li>
+                        <li><strong>Интеграция технологий:</strong> Использование токенов MCN обеспечивает удобство онлайн-платежей и интеграцию современных технологий.</li>
                     </ul>
 
                     <h2>Почему наш маркетплейс уникален?</h2>
@@ -218,7 +282,7 @@
                 </p>
             </div>
 
-            <div class="project">
+            <div class="project project_3">
                 <h3 class="project__title">MCN Pay</h3>
                 <p class="project__description">
                     <h1>MCN Pay: Инновационный способ оплаты</h1>
@@ -226,17 +290,17 @@
 
                     <h2>Особенности MCN Pay:</h2>
                     <ul>
-                        <li>**Картовые транзакции:** Оплачивайте товары и услуги с помощью карт MCN Pay, обеспечивая быстрые и удобные транзакции.</li>
-                        <li>**QR-коды для оплаты:** Просто отсканируйте QR-код с помощью вашего мобильного устройства, чтобы осуществить быструю и безопасную оплату.</li>
-                        <li>**Интеграция с кошельками:** MCN Pay легко интегрируется с различными электронными кошельками, обеспечивая гибкость в выборе способа оплаты.</li>
-                        <li>**Безопасность и конфиденциальность:** Ваши финансовые данные защищены передовыми технологиями шифрования, обеспечивая высший уровень безопасности.</li>
+                        <li><strong>Картовые транзакции:</strong> Оплачивайте товары и услуги с помощью карт MCN Pay, обеспечивая быстрые и удобные транзакции.</li>
+                        <li><strong>QR-коды для оплаты:</strong> Просто отсканируйте QR-код с помощью вашего мобильного устройства, чтобы осуществить быструю и безопасную оплату.</li>
+                        <li><strong>Интеграция с кошельками:</strong> MCN Pay легко интегрируется с различными электронными кошельками, обеспечивая гибкость в выборе способа оплаты.</li>
+                        <li><strong>Безопасность и конфиденциальность:z</strong> Ваши финансовые данные защищены передовыми технологиями шифрования, обеспечивая высший уровень безопасности.</li>
                     </ul>
 
                     <h2>Как использовать MCN Pay:</h2>
                     <ol>
-                        <li>**Картовые транзакции:** Вставьте карту MCN Pay в терминал и следуйте инструкциям для завершения оплаты.</li>
-                        <li>**QR-коды для оплаты:** Откройте приложение MCN Pay на своем мобильном устройстве, отсканируйте QR-код и подтвердите транзакцию.</li>
-                        <li>**Интеграция с кошельками:** Выберите MCN Pay в вашем электронном кошельке и следуйте указаниям для совершения платежа.</li>
+                        <li><strong>Картовые транзакции:</strong> Вставьте карту MCN Pay в терминал и следуйте инструкциям для завершения оплаты.</li>
+                        <li><strong>QR-коды для оплаты:</strong> Откройте приложение MCN Pay на своем мобильном устройстве, отсканируйте QR-код и подтвердите транзакцию.</li>
+                        <li><strong>Интеграция с кошельками:</strong> Выберите MCN Pay в вашем электронном кошельке и следуйте указаниям для совершения платежа.</li>
                     </ol>
 
                     <p>MCN Pay предоставляет современные и удобные методы оплаты, поддерживая как традиционные картовые транзакции, так и инновационные QR-коды для вашего максимального удобства.</p>
@@ -245,7 +309,7 @@
         </div>
     </section>
 
-    <section class="fifth">
+    <section class="fifth" id="road">
         <div class="section__fifth">
             <div class="plan-section">
                 <h2>Первая Часть Планов</h2>
@@ -298,13 +362,21 @@
 
     <section class="sixth">
         <div class="section__sixth">
-            <div>
-                
+            <div class="container">
+                <h1 class="sixth_title">Интересные факты о MCN</h1>
+                <h1 class="sixth_desc_title">Ограниченная Эмиссия MCNcoin</h1>
+                <p class="sixth_desc">Mcncoin (MCN) впечатляет своей стратегией эмиссии, предлагая всего 12 000 000 коинов. Эта ограниченная выпускная политика придает MCN уникальность и стимулирует рост его стоимости, создавая устойчивое основание для долгосрочных инвестиций.</p>
+
+                <h1 class="sixth_desc_title">Взгляд в будущее – Государственный Токен MCN</h1>
+                <p class="sixth_desc">MCNcoin амбициозно стремится стать государственным токеном, подобно обычным национальным валютам. Это означает, что MCN не просто цифровая валюта – это инновационный шаг к созданию устойчивой криптовалюты, нацеленной на использование в повседневных финансовых операциях.</p>
+
+                <h1 class="sixth_desc_title">Команда, Компания и Проекты – Три Стойки MCN</h1>
+                <p class="sixth_desc">MCNcoin не просто токен, это целостный проект, олицетворяющий собой не только криптовалюту, но и внушительную команду профессионалов. Основание компании и наличие разнообразных проектов, связанных с MCN, подчеркивают его важность и потенциал на рынке криптовалют.</p>
             </div>
         </div>
     </section>
     
-    <section class="seventh">
+    <section class="seventh" id="part">
         <div class="section__seventh">
             <h1 class="partners__title">
                 Наши партнеры
@@ -396,7 +468,9 @@
     
     <section class="eighth">
         <div class="section__eight">
-
+            <div id="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
         </div>
     </section>
 
@@ -415,8 +489,6 @@
             </div>
     </section>  
 
-    
-
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__section">
@@ -431,26 +503,27 @@
             <div class="footer__section">
                 <h2 class="footer__title">Использование</h2>
                 <ul class="footer__links">
-                    <li><a href="#">Где и как использовать?</a></li>
-                    <li><a href="#">В чем преимущества?</a></li>
-                    <li><a href="#">Проекты MCN</a></li>
-                    <li><a href="#">Партнеры</a></li>
-                    <li><a href="#">Дорожная карта</a></li>
+                    <li><a href="#prem" onclick="scrollToMap()">Где и как использовать?</a></li>
+                    <li><a href="#prem">В чем преимущества?</a></li>
+                    <li><a href="#prog">Проекты MCN</a></li>
+                    <li><a href="#part">Партнеры</a></li>
+                    <li><a href="#road">Дорожная карта</a></li>
                 </ul>
             </div> 
 
             <div class="footer__section">
                 <h2 class="footer__title">Контакты</h2>
-                <p>Email: info@example.com</p>
+                <p>Email: info@mcncoin.io</p>
                 <p>Телефон: +7 123 456 7890</p>
-                <a href="" class="icon-instagram"></a>
-                <a href="" class="icon-whatsapp"></a>
-                <a href="" class="icon-telegram"></a>
+                <a href="https://www.instagram.com/mcncoin_official?igsh=MTFyNjYzMmllbzNqcQ==" class="icon-instagram"></a>
+                <a href="https://whatsapp.com/channel/0029VaLJWcjHLHQhJzYuUm3Y" class="icon-whatsapp"></a>
+                <a href="https://t.me/mcn_coin_official" class="icon-telegram"></a>
+                <a href="" class="icon-twitter"></a>
             </div>
             
-            <div class="footer__section">
+            <div class="footer__section footer_section">
                 <h2 class="footer__title">Компания "Бирик-Туран", с продукцией MCN</h2>
-                <p>Откройте двери в мир криптовалюты, где каждый момент — это новая возможность для вашего финансового роста. Давайте создадим будущее вместе!</p>
+                <p class="footer_desc">Откройте двери в мир криптовалюты, где каждый момент — это новая возможность для вашего финансового роста. Давайте создадим будущее вместе!</p>
             </div>
         </div>
     
@@ -458,6 +531,12 @@
             <p>&copy; 2024 Ваша компания. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="/MCNcoin-main/MCncoin/src/code/button.js"></script> 
     <script src="/MCNcoin-main/MCncoin/src/code/animared.js"></script>
+    <script src="/MCNcoin-main/MCncoin/src/code/chart.js"></script>
+    <script src="/MCNcoin-main/MCncoin/src/code/header.js"></script>
+
+    <script src="/MCNcoin-main/MCncoin/src/code/prem.js"></script>
 </body>
 </html>

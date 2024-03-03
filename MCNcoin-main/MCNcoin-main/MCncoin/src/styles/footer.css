@@ -112,3 +112,38 @@
     margin: 0;
     font-size: 0.8em;
 }
+
+
+@media screen and (max-width: 767px) {
+    .footer {
+        display: block;
+        margin: 20px auto 0;
+        padding: 15px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__section {
+        flex: none;
+        margin: 10px 0;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-form input {
+        width: 100%;
+    }
+    .footer__title{
+        display: none;
+    }
+    .footer_desc{
+        display: none;
+    }
+}
+

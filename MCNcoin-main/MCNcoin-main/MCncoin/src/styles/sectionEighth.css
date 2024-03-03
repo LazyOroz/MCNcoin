@@ -1,0 +1,43 @@
+.chart-container {
+    max-width: 800px;
+    margin: 500px auto 0;
+    background-image: linear-gradient(#fff, #000, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#myChart {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.sixth_title {
+    color: #3498db;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-description {
+    color: #555;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chart-container {
+    animation: fadeInUp 1s ease-out;
+}

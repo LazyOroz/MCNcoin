@@ -9,18 +9,6 @@
     justify-content: center;
 }
 
-.ninth-animation{                       
-    animation: wipe-enter 2s 1;
-}
-
-@keyframes wipe-enter {
-    0% {
-      transform: scale(0, .025)
-    }
-    50% {
-      transform: scale(1, .025)
-    }
-}
 
 .section__ninth {
     max-width: 800px; /* Максимальная ширина контейнера секции */
@@ -54,14 +42,14 @@
     margin: 0px 30px 0px 30px;
   }
   .square-animation {
-    animation: wipe-enter 2s 1
+    animation: wipe-enter 0.5s 1
   }
   @keyframes wipe-enter {
     0% {
       transform: scale(0, .025)
     }
     50% {
-      transform: scale(1, .025)
+      transform: scale(0.5 , .025)
     }
   }
   
