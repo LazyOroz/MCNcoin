@@ -1,0 +1,115 @@
+.first{
+    display: flex;
+}
+
+.section_first{
+    text-align: center;
+    max-width: 1200px; /* Настройте максимальную ширину, если нужно */
+    margin: 250px auto 500px; /* Чтобы выровнять по центру по горизонтали */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    height: 600px; /* Чтобы сделать секцию по высоте равной всему экрану */
+    background-image: linear-gradient(30deg, rgb(8, 15, 75), rgb(8, 15, 75, 0.3), rgb(8, 15, 75));
+    border: 1px solid #0010f5;
+    border-color: #2f00ff;
+    border-radius: 20px;
+    overflow: hidden; 
+}
+
+.section__first {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* Чтобы сделать секцию по высоте равной всему экрану */
+   
+}
+
+.section__first_title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(31, 46, 180);
+    font-size: 2.5vmax;
+    background: linear-gradient(90deg, #ffee00, #ff0080);
+    color: #4000ff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Caveat;
+}
+
+.section__first__desc {
+    font-size: 3em;
+    line-height: 2em;
+    color: #fff;
+    font-size: 1.2vmax;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section__first__photo {
+    position: absolute;
+    top: 580px; /* Измените это значение в соответствии с вашими требованиями */
+    right: -250px; /* Измените это значение в соответствии с вашими требованиями */
+}
+
+.section__first__photo img {
+    width: 25%;
+    height: auto;
+    max-width: 100%;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate {
+    animation: rotate 2s linear infinite;
+  }
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0); /* Установите альфа-канал (прозрачность) в 0 */
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.5s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-image: linear-gradient(90deg, rgba(170, 170, 170, 0), rgb(29, 91, 116));
+    transform: scale(1.01);
+}
+
+.button-fourth {
+    margin-top: 20px;
+    background: linear-gradient(26deg, #bb3176, #0000ff);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1,5em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.2s ease;
+}
+
+.button-fourth:hover {
+    background: linear-gradient(15deg, rgba(4, 0, 255, 0.8), rgba(196, 69, 153, 0.8));
+    transform: scale(1.05);
+}

@@ -1,0 +1,52 @@
+@import 'header.css';
+@import 'sectionFirst.css';
+@import 'sectionSecond.css';
+@import 'sectionThird.css';
+@import 'sectionFourth.css';
+@import 'sectionFifth.css';
+@import 'sectionSixth.css';
+@import 'sectionSeventh.css';
+@import 'sectionEighth.css';
+@import 'sectionNinth.css';
+@import 'footer.css';                                   
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Чтобы контент оставался по центру на весь экран */
+    background-image: url('/MCNcoin-main/MCncoin/src/assets/back.jpg');
+    background-size: cover; /* чтобы изображение заполняло всю область фона без искажений */
+    background-position: -5800px; /* чтобы изображение оставалось по центру */
+    background-repeat: no-repeat; /* чтобы изображение не повторялось */
+    cursor: url('/MCNcoin-main/MCncoin/src/assets/1-removebg-preview.png'), auto;
+    transition: background 0.5s ease;
+}
+
+@media (min-width: 1200px){
+    body{
+        min-height: 80vh;
+    }
+}
+
+@media (min-width: 992px){
+    
+}   
+
+@media (min-width: 720px){
+    
+}
+
+@media (min-width: 480px){
+    
+}
+
+@media (min-width: 320px){
+    
+}

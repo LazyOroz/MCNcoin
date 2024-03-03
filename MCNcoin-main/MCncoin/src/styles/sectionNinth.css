@@ -1,0 +1,67 @@
+.ninth {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 0; /* Внутренний отступ секции */
+    margin: 500px auto 0;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.section__ninth {
+    max-width: 800px; /* Максимальная ширина контейнера секции */
+    margin: 0 auto; /* Центрирование контейнера */
+    text-align: center; /* Выравнивание текста по центру */
+    align-items: center;
+    justify-content: center;
+}
+
+.section__ninth h1 {
+    color: #fff; /* Цвет заголовка */
+    font-size: 2em; /* Размер шрифта заголовка */
+    margin-bottom: 20px; /* Внутренний отступ снизу заголовка */
+}
+
+.motivation__text {
+    color: #fff; /* Цвет текста */
+    font-size: 1.2em; /* Размер шрифта текста */
+    line-height: 1.6; /* Межстрочный интервал */
+}
+
+  .square {
+    width: 1000px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #ffffff;  
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 30px 0px 30px;
+  }
+  .square-animation {
+    animation: wipe-enter 0.5s 1
+  }
+  @keyframes wipe-enter {
+    0% {
+      transform: scale(0, .025)
+    }
+    50% {
+      transform: scale(0.5 , .025)
+    }
+  }
+  
+  .wrap {
+    display: flex;
+  }
+
+  .stage, .stage-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .stage-footer {
+    margin: 10px
+  }
