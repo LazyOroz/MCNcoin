@@ -1,0 +1,27 @@
+.centertext{
+    color: #EBEBEB;
+    font-family: Gilroy-Bold;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 445px;
+}
+.text{
+    color: #ffff;
+    text-align: left;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 445px;
+}
+.button{
+    width: 400px; /* Устанавливаем ширину кнопки */
+    height: 60px; /* Устанавливаем высоту кнопки */
+    border-radius: 30px;
+    border: 1px solid #5ED67E;
+    background-color: #ffffff00; 
+    color: white;
+    margin-left: 445px;
+    margin-top: 54px;
+}

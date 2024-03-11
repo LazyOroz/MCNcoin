@@ -1,0 +1,72 @@
+@import '../style/fifth.css';
+
+body {
+    background-color: black;
+    background-image: url('../assets/Background Ellipse 1.svg');
+    background-repeat: no-repeat; /* Запрет повторения фонового изображения */
+    background-position: right 500px; /* Местоположение изображения в центре экрана */
+    background-size: auto; /* Растягиваем изображение, чтобы покрыть всю область */
+    height: 100vh; /* Занимаем 100% высоты экрана */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .switch-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .switch-word {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  
+  .switch-content {
+    overflow: hidden;
+    transition: width 0.5s ease;
+  }
+  
+  .word1,
+  .word2 {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s ease;
+  }
+  
+  .word1,
+  .word2 {
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
+
+
+
+
+
+  .slider-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slide {
+    min-width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .prev-button,
+  .next-button {
+    margin-top: 10px;
+    cursor: pointer;
+  }

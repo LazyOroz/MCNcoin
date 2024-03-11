@@ -1,0 +1,34 @@
+.pip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
+  }
+  
+  .left-cars {
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px; /* Зазор между блоками слева и справа */
+  }
+  
+  .left-car {
+    border: 1px solid #5ED67E;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .right-car {
+    border: 1px solid #5ED67E;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  

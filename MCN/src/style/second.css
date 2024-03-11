@@ -1,0 +1,17 @@
+.miku{
+    color: #ffff;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 164px;
+}
+.partner-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  .partner-block {
+    width: 310px;
+    height: 146px;
+    background-color: #0D0D12;
+  }

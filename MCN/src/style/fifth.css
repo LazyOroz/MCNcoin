@@ -1,0 +1,68 @@
+.fifth{
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали (если нужно) */
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали (если нужно) */
+    margin-bottom: 20px;
+}
+
+.fifth_container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fifth_button {
+    position: relative;
+    width: 748px;
+    height: 60px;
+    border-radius: 42.857px;
+    border: 1.429px solid #5ED67E;
+    margin-bottom: 20px;
+    text-align: center; /* Выравнивание содержимого по центру */
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.toggle-button {
+    font-family: Gilroy-Bold;
+    width: 367px;
+    height: 48px;
+    padding: 12px 94.429px 11px 94px;
+    border-radius: 27.143px;
+    margin-right: 10px;
+    background: rgba(255, 255, 255, 0);
+    color: #5ED67E;
+    border: none; /* Убираем границу, так как она уже находится на .fifth_button */
+}
+
+.toggle-button.active {
+    background: #FFF;
+    font-family: Gilroy-Bold;
+}
+
+.buttons-container {
+    margin-bottom: 20px; /* Просто пример значения для отступа снизу */
+}
+
+.content-block {
+    
+}
+
+.section__fifth__title {
+    /* Ваши стили для заголовка */
+}

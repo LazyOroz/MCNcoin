@@ -1,0 +1,44 @@
+.bodylogo{
+    text-align: center;
+    margin-top: 65px;
+}
+.svoboda{
+    margin-top: 65px;
+    text-align: center;
+    color: white;
+    font-size: 38px;
+}
+.diva{
+    color: #ffff;
+    text-align: center;
+    margin-top: -25px;
+}
+.first{
+    text-align: center;
+}
+  
+  .custom-button {
+    width: 400px; /* Устанавливаем ширину кнопки */
+    height: 60px; /* Устанавливаем высоту кнопки */
+    border: 1px solid #5ED67E;
+    border-radius: 30px;
+    background-color: #ffffff00;
+    margin: 30px; /* Расстояние между кнопками */
+    cursor: pointer;
+    color: #ffff;
+    transition: background-color 0.3s ease;
+  }
+  .custom-button:hover {
+    background-color: #0333077a;
+  }
+  .zerotwo{
+    border: 1px solid #5ED67E;
+    background-color: #5ED67E;
+    width: 354px; /* Устанавливаем ширину кнопки */
+    height: 60px; /* Устанавливаем высоту кнопки */
+    cursor: pointer;
+    border-radius: 30px;
+    color: #ffff;
+    font-size: 20px;
+
+  }

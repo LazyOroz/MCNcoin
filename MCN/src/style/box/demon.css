@@ -1,0 +1,28 @@
+.akame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -250px;
+}
+
+.left-demons {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-demon {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #fff;
+}
+
+.right-demon {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-left: 240px; /* Зазор между правым блоком и левыми блоками */
+    padding: 10px;
+    color: #fff;
+}

@@ -1,0 +1,43 @@
+
+.sixth{
+  margin-top: 200px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-blocks {
+  display: flex;
+  flex-direction: column;
+  margin-left: 240px; /* Зазор между блоками слева и справа */
+}
+
+.left-block {
+  border: 1px solid #5ED67E;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #fff;
+}
+
+.right-block {
+  border: 1px solid #5ED67E;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  color: #fff;
+}
+.black{
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+}
+
+
+
