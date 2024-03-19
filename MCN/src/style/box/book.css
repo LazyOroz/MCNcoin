@@ -12,7 +12,7 @@
   .left-books {
     display: flex;
     flex-direction: column;
-    margin-left: 240px; /* Зазор между блоками слева и справа */
+    margin-left: 20px; /* Зазор между блоками слева и справа */
   }
   
   .left-book {
@@ -30,7 +30,9 @@
     padding: 10px;
     color: #fff;
   }
-  
+.third-img{
+  margin-left: 250px;
+}
   
   
   

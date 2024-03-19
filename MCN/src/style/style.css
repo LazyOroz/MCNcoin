@@ -1,12 +1,17 @@
+@import '../style/header.css';
+@import '../style/SectionFirst.css';
+@import '../style/second.css';
+@import '../style//third.css';
+@import '../style/forth.css';
 @import '../style/fifth.css';
+@import '../style/sixth.css';
+@import '../style/seventh.css';
+@import '../style/eigth.css';
 
 body {
     background-color: black;
-    background-image: url('../assets/Background Ellipse 1.svg');
-    background-repeat: no-repeat; /* Запрет повторения фонового изображения */
-    background-position: right 500px; /* Местоположение изображения в центре экрана */
-    background-size: auto; /* Растягиваем изображение, чтобы покрыть всю область */
-    height: 100vh; /* Занимаем 100% высоты экрана */
+    background-image: url('');
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
   }
@@ -46,11 +51,6 @@ body {
     border-radius: 5px;
     font-size: 18px;
   }
-
-
-
-
-
 
   .slider-container {
     display: flex;

@@ -1,6 +1,10 @@
+
+
 .suzuki{
     text-align: center;
-    margin-top: 200px;
+    margin-top: 210px;
+    display: flex;
+    flex-direction: column; 
 }
 .nino{
     color: #EBEBEB;

@@ -6,32 +6,56 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/style/style.css">
     <link rel="stylesheet" href="">
+
+    <!-- Стили Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <header>
-        <link rel="stylesheet" href="/src/style/header.css">
-       <nav>
-        <ul>
-            <li class="box"><a href="#">White Papper</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Redmap</a></li>
-            <li><a href="#">Дисклеймер</a></li>
-        </ul>
-       </nav>
+        <div class="header_logo">
             <img src="/src/assets/Logo.svg" alt="" class="headlogo">
-        <div class="MCNlogo">
-            <h3>
-                MCN COIN
-            </h3>
+            <div class="MCNlogo">
+                <h3>
+                    MCN COIN
+                </h3>
+            </div>
         </div>
-        <script src="/src/code/header.js"></script>
 
+        <nav class="header_nav">
+            <ul class="header_nav_ul">
+                <li class="box"><a href="#">White Papper</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Redmap</a></li>
+                <li><a href="#">Дисклеймер</a></li>
+            </ul>
+        </nav>
+        
+        <div class="language">
+            <select id="language" onchange="changeLanguage()">
+                <option value="ru">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.096 0.825806C5.20082 0.825806 0.421875 5.60481 0.421875 11.5C0.421875 17.3951 5.20082 22.1741 11.096 22.1741C16.9912 22.1741 21.7702 17.3951 21.7702 11.5C21.7702 5.60481 16.9912 0.825806 11.096 0.825806ZM9.99017 20.5833C7.96495 20.3407 6.09112 19.4341 4.62645 17.9695C2.89836 16.2414 1.94672 13.9439 1.94672 11.5C1.94672 9.29999 2.71834 7.21883 4.13292 5.56459C4.16936 6.00167 4.25932 6.47025 4.23627 6.80521C4.15211 8.02632 4.03162 8.79055 4.74638 9.82076C5.02483 10.222 5.09324 10.7972 5.22877 11.2617C5.36132 11.716 5.89087 11.9544 6.2561 12.2343C6.99298 12.7993 7.69794 13.4559 8.47931 13.9532C8.995 14.2813 9.31713 14.4446 9.1661 15.0739C9.04463 15.58 9.01071 15.8917 8.74888 16.3426C8.66898 16.4802 9.05048 17.3648 9.17744 17.4917C9.56222 17.8765 9.94403 18.2294 10.3635 18.5758C11.0137 19.1131 10.3003 19.8112 9.99017 20.5833ZM17.5656 17.9696C16.2501 19.285 14.6046 20.1499 12.8158 20.4883C13.0693 19.8614 13.5207 19.3044 13.9394 18.9815C14.3036 18.7005 14.7597 18.1599 14.95 17.7318C15.1401 17.3042 15.3919 16.9335 15.6467 16.5403C16.0093 15.981 14.7528 15.1375 14.3457 14.9607C13.4294 14.563 12.7397 14.0262 11.9254 13.4533C11.3453 13.0451 10.1674 13.6664 9.51246 13.3805C8.61537 12.9888 7.87629 12.3082 7.09651 11.721C6.29184 11.1149 6.33074 10.4084 6.33074 9.51443C6.96103 9.53768 7.85766 9.34 8.27611 9.84687C8.40815 10.0068 8.86216 10.7214 9.16607 10.4675C9.41434 10.26 8.98209 9.42837 8.8986 9.23285C8.64175 8.63166 9.48383 8.39718 9.91485 7.98951C10.4773 7.45765 11.6838 6.62353 11.5884 6.24229C11.4931 5.86104 10.3812 4.7809 9.72821 4.94943C9.63034 4.97468 8.76871 5.87813 8.60223 6.01987C8.60665 5.725 8.61106 5.43018 8.61558 5.1353C8.6184 4.94912 8.26826 4.75801 8.28452 4.63793C8.32558 4.33443 9.17038 3.78363 9.38053 3.54193C9.23329 3.44991 8.73089 3.01838 8.57883 3.0817C8.21068 3.23515 7.7949 3.34086 7.42674 3.49425C7.42674 3.36657 7.41124 3.24664 7.39277 3.1282C8.13052 2.80156 8.91112 2.57443 9.71799 2.45326L10.4408 2.74372L10.9511 3.34933L11.4603 3.87447L11.9055 4.0179L12.6126 3.35102L12.4303 2.87494V2.447C13.8287 2.65012 15.1494 3.17182 16.306 3.97628C16.099 3.99481 15.8717 4.02524 15.6151 4.05788C15.5091 3.99527 15.3732 3.96684 15.2577 3.92327C15.5928 4.64388 15.9424 5.35453 16.2976 6.0656C16.677 6.82516 17.5186 7.63988 17.6664 8.44168C17.8406 9.38675 17.7197 10.2452 17.815 11.3571C17.9068 12.4279 19.0222 13.6445 19.0222 13.6445C19.0222 13.6445 19.5373 13.8199 19.9657 13.7588C19.5664 15.3385 18.7477 16.7873 17.5656 17.9696Z" fill="white"/>
+                      </svg>
+                    Русский - RU
+                </option>
+                <option value="en">
+
+                    English - EN
+                </option>
+            </select>
+        </div>
     </header>
+    
     <section class="first">
-        <link rel="stylesheet" href="/src/style/SectionFirst.css">
         <div class="bodylogo">
-            <img src="/src/assets/body.logo.svg" alt="">
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=cdmq9B9kk322tcEu">
+                <img src="/src/assets/body.logo.svg" alt="">
+            </a>
         </div>
         <div class="svoboda">
             <h1>
@@ -43,19 +67,23 @@
                 Выберите Mcncoin для финансовой независимости. <br> Инвестируйте в свое будущее с уверенностью в мире цифровых активов.
             </h2>
         </div>
-        <div class="button-container">
-            <button class="custom-button">Кнопка 1</button>
-            <button class="custom-button">Кнопка 2</button>
-            <button class="custom-button">Кнопка 3</button>
-          </div>
-          <div>
-            <button class="zerotwo">
-                Узнать больше о MCN
-            </button>
-          </div>
+
+        <div class="button_container">
+            <div class="button-container">
+                <button class="custom-button">Начало работы с MCN</button>
+                <button class="custom-button">Выбрать  кошелек</button>
+                <button class="custom-button">Получите MCN</button>
+            </div>
+    
+            <div>
+                <button class="zerotwo">
+                    Узнать больше о MCN
+                </button>
+            </div>
+        </div>
     </section>
+
     <section class="second">
-        <link rel="stylesheet" href="/src/style/second.css">
         <div class="miku">
             <h2>
                 Партнеры
@@ -68,38 +96,52 @@
             <div class="partner-block"></div>
           </div>
     </section>
-    <section class="third">
-        <link rel="stylesheet" href="/src/style/third.css">
-       
+
+    <section class="third">    
         <div class="suzuki">
-             <div class="nino">
-            <h2>
-                Мы - опытная команда профессионалов, стоящая за MCN.
-            </h2>
-        </div>
-        <div class="ichiko">
-            <p>
-                MCN - это криптовалюта, разработанная нашей компанией, "Бирик Туран", Это цифровой актив,<br> который предназначен для облегчения процессов платежей, инвестиций и обмена внутри нашей <br> экосистемы MCN - базируется на передовых технологиях блокчейн, обеспечивая безопасность и <br> прозрачность транзакций. <br> Наша монета предоставляет удобные решения для пользователей, позволяя им использовать <br> криптовалюту в различных аспектах своей повседневной жизни, включая оплату товаров и услуг, <br> участие в наших проектах и взаимодействие с нашими партнерами по всему миру.
-            </p>
-        </div>
+            <div class="nino">
+                <h2>
+                    Мы - опытная команда профессионалов, стоящая за MCN.
+                </h2>
+            </div>
+            <div class="third_container">
+                <div class="ichiko">
+                    <p>
+                        MCN - это криптовалюта, разработанная нашей компанией, "Бирик Туран", Это цифровой актив,<br> 
+                        который предназначен для облегчения процессов платежей, инвестиций и обмена внутри нашей <br> 
+                        экосистемы MCN - базируется на передовых технологиях блокчейн, обеспечивая безопасность и <br> 
+                        прозрачность транзакций. <br> Наша монета предоставляет удобные решения для пользователей, позволяя им использовать <br> 
+                        криптовалюту в различных аспектах своей повседневной жизни, включая оплату товаров и услуг, <br> 
+                        участие в наших проектах и взаимодействие с нашими партнерами по всему миру.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
+    
     <section class="fourth">
-        <link rel="stylesheet" href="/src/style/forth.css">
-        <div class="centertext">
-            <h2>
-                Что такое MCN?
-            </h2>
-        </div>
-        <div class="text">
-            <p>
-                MCN - это криптовалюта, разработанная нашей компанией, "Бирик Туран", Это цифровой актив, <br> который предназначен для облегчения процессов платежей, инвестиций и обмена внутри нашей <br> экосистемы MCN - базируется на передовых технологиях блокчейн, обеспечивая безопасность и <br> прозрачность транзакций. <br> Наша монета предоставляет удобные решения для пользователей, позволяя им использовать <br> криптовалюту в различных аспектах своей повседневной жизни, включая оплату товаров и услуг, <br> участие в наших проектах и взаимодействие с нашими партнерами по всему миру.
-            </p>
-        </div>
-        <div>
-            <button class="button">Читать White Paper</button>
+        <div class="fourth_container">
+            <div class="centertext">
+                <h2>
+                    Что такое MCN?
+                </h2>
+            </div>
+            <div class="text">
+                <p>
+                    MCN - это криптовалюта, разработанная нашей компанией, "Бирик Туран", Это цифровой актив, <br>
+                    который предназначен для облегчения процессов платежей, инвестиций и обмена внутри нашей <br> 
+                    экосистемы MCN - базируется на передовых технологиях блокчейн, обеспечивая безопасность и <br> 
+                    прозрачность транзакций. <br> Наша монета предоставляет удобные решения для пользователей, позволяя им использовать <br> 
+                    криптовалюту в различных аспектах своей повседневной жизни, включая оплату товаров и услуг, <br> 
+                    участие в наших проектах и взаимодействие с нашими партнерами по всему миру.
+                </p>
+            </div>
+            <div class="buttonContainer">
+                <button class="button">Читать White Paper</button>
+            </div>
         </div>
     </section>
+    
     <section class="fifth">
             <div class="fifth_container">
                 <div class="fifth_button">
@@ -115,6 +157,7 @@
             </div>
         </div>
     </section>
+    
     <section class="sixth">
         <link rel="stylesheet" href="/src/style/sixth.css">
         <h2 class="black">
@@ -122,17 +165,24 @@
         </h2>
         <div class="container">
             <div class="right-block" style="width: 322px; height: 258px;">
-              <p>Правый блок</p>
+                <div class="ikonka">
+                    <img src="/src/assets/Иконка.svg" alt="">
+                </div>
+              <h2 class="puti">2024</h2>
             </div>
+            <div class="left-img">
+                     <img src="/src/assets/points.svg" alt="">
+                </div>
             <div class="left-blocks">
+               
               <div class="left-block" style="height: 52px; width: 391px;">
-                <p>Блок 1</p>
+                <p>Продажа токенов перед основным релизом</p>
               </div>
               <div class="left-block" style="height: 52px; width: 391px;">
-                <p>Блок 2</p>
+                <p>Установление партнерства с CoinMarket Cap</p>
               </div>
               <div class="left-block" style="height: 52px; width: 391px;">
-                <p>Блок 3</p>
+                <p>Введение переговоров о сотрудничестве с международными биржами</p>
               </div>
             </div>
         </div>
@@ -143,17 +193,23 @@
             <div class="nina">
                 <div class="left-boxes">
                     <div class="left-box" style="height: 52px; width: 391px;">
-                        <p>Блок 1</p>
+                        <p>Листинг токена на CEX бирже</p>
                     </div>
                     <div class="left-box" style="height: 52px; width: 391px;">
-                        <p>Блок 2</p>
+                        <p>Разработка и улучшение собственной платформы</p>
                     </div>
                     <div class="left-box" style="height: 52px; width: 391px;">
-                        <p>Блок 3</p>
+                        <p>Расширение влияния токена на других платформах</p>
                     </div>
                 </div>
+                <div class="second-img">
+                    <img src="/src/assets/points.svg" alt="">
+                </div>
                 <div class="right-box" style="width: 322px; height: 258px;">
-                    <p>Правый блок</p>
+                    <div class="ikonka">
+                        <img src="/src/assets/Иконка.svg" alt="">
+                    </div>
+                  <h2 class="puti">2024</h2>
                 </div>
             </div>
         </div>
@@ -161,17 +217,23 @@
         <div class="bib">
             <link rel="stylesheet" href="/src/style/box/book.css">
             <div class="right-book" style="width: 322px; height: 258px;">
-              <p>Правый блок</p>
+                <div class="ikonka">
+                    <img src="/src/assets/Иконка.svg" alt="">
+                </div>
+              <h2 class="puti">2024</h2>
+            </div>
+            <div class="third-img">
+                <img src="/src/assets/points.svg" alt="">
             </div>
             <div class="left-books">
               <div class="left-book" style="height: 52px; width: 391px;">
-                <p>Блок 1</p>
+                <p>Разработка мобильного приложения для платформы</p>
               </div>
               <div class="left-book" style="height: 52px; width: 391px;">
-                <p>Блок 2</p>
+                <p>Запуск онлайн игр на платформе</p>
               </div>
               <div class="left-book" style="height: 52px; width: 391px;">
-                <p>Блок 3</p>
+                <p>Стратегическое планирование и дальнейший рост</p>
               </div>
             </div>
         </div>
@@ -181,17 +243,26 @@
             <div class="akame">
                 <div class="left-demons">
                     <div class="left-demon" style="height: 52px; width: 391px;">
-                        <p>Блок 1</p>
+                        <p>Платежная система</p>
                     </div>
                     <div class="left-demon" style="height: 52px; width: 391px;">
-                        <p>Блок 2</p>
+                        <p>Валидаторы</p>
                     </div>
                     <div class="left-demon" style="height: 52px; width: 391px;">
-                        <p>Блок 3</p>
+                        <p>Обменные пункты</p>
+                    </div>
+                    <div class="left-demon" style="height: 52px; width: 391px;">
+                        <p>Пункты перевода</p>
                     </div>
                 </div>
+                <div class="forth-img">
+                    <img src="/src/assets/Group 37.svg" alt="">
+                </div>
                 <div class="right-demon" style="width: 322px; height: 258px;">
-                    <p>Правый блок</p>
+                    <div class="ikonka">
+                        <img src="/src/assets/Иконка.svg" alt="">
+                    </div>
+                    <h2 class="puti">2024</h2>
                 </div>
             </div>
         </div>
@@ -199,17 +270,23 @@
         <div class="pip">
             <link rel="stylesheet" href="/src/style/box/car.css">
             <div class="right-car" style="width: 322px; height: 258px;">
-              <p>Правый блок</p>
+                <div class="ikonka">
+                    <img src="/src/assets/Иконка.svg" alt="">
+                </div>
+              <h2 class="puti">2024</h2>
+            </div>
+            <div class="fifth-img">
+                <img src="/src/assets/points.svg" alt="">
             </div>
             <div class="left-cars">
               <div class="left-car" style="height: 52px; width: 391px;">
-                <p>Блок 1</p>
+                <p>Личная платформа для перевода</p>
               </div>
               <div class="left-car" style="height: 52px; width: 391px;">
-                <p>Блок 2</p>
+                <p>Улучшение безопасности</p>
               </div>
               <div class="left-car" style="height: 52px; width: 391px;">
-                <p>Блок 3</p>
+                <p>Улучшение конфиденциальности</p>
               </div>
             </div>
         </div>
@@ -217,40 +294,75 @@
             
     
     </section>
+    
     <section class="seventh">
-        <div class="slider-container">
-            <div class="slide">
-              <p>Содержимое слайда 1</p>
-            </div>
-            <div class="slide">
-              <p>Содержимое слайда 2</p>
-            </div>
-            <div class="slide">
-              <p>Содержимое слайда 3</p>
-            </div>
-            <div class="slide">
-                <p>Содержимое слайда 3</p>
+        <link rel="stylesheet" href="/src/style/seventh.css">
+        <div class="seventh_container">
+            <div class="info-block">
+                
+                <div class="left-sev">
+                    <h1 class="kochevniki">
+                        Игры Кочевников
+                    </h1>
+                    <div class="sev">
+                         <!-- Блок с информацией слева -->
+                  <p>Добро пожаловать в "Кочевники": Уникальный Опыт <br> Кыргызстана! <br> 
+                    Многогранная игровая платформа, вдохновленная <br> культурным наследием Кыргызстана, представляет <br> "Кочевники" – увлекательный мир народных игр, <br> воплощающий виртуальное переживание кочевого образа <br> жизни. </p>
+                    </div>
+                 
+                </div>
+                <div class="kjkj">
+                  <!-- Блоки справа -->
+                  <div class="klkl">tt</div>
+                  <div class="klkl">tt</div>
+                </div>
               </div>
-              <div class="slide">
-                <p>Содержимое слайда 3</p>
-              </div>
-              <div class="slide">
-                <p>Содержимое слайда 3</p>
-              </div>
-          </div>
-          <button class="prev-button">Предыдущий</button>
-          <button class="next-button">Следующий</button>
-          <script src="script.js"></script>
-    </section>
-    <section class="eith">
-        <div>
-            
         </div>
-    </section>
-</body>
-<footer>
-    <div>
 
-    </div>
-</footer>
+
+        <div class="eit-div">
+            <div class="eit-block">
+                
+                <div class="left-eit">
+                    <h1 class="kochevnikii">
+                        Игры Кочевников
+                    </h1>
+                    <div class="eit">
+                         <!-- Блок с информацией слева -->
+                  <p>Добро пожаловать в "Кочевники": Уникальный Опыт <br> Кыргызстана! <br> 
+                    Многогранная игровая платформа, вдохновленная <br> культурным наследием Кыргызстана, представляет <br> "Кочевники" – увлекательный мир народных игр, <br> воплощающий виртуальное переживание кочевого образа <br> жизни. </p>
+                    </div>
+                 
+                </div>
+                <div class="gogo">
+                  <!-- Блоки справа -->
+                  <div class="kiki">tt</div>
+                  <div class="kiki">tt</div>
+                </div>
+              </div>
+        </div>
+
+    </section> 
+    
+    <section class="eigth">
+        <div class="accardion-panel">
+            <div class="accardion-header">
+                Click here
+            </div>
+            <div class="accardion-bottom">
+                <div class="accardion-content">
+                    Далеко-далеко за, словесными горами в стране гласных и согласных живут
+                    рыбные тексты.
+                </div>
+            </div>
+        </div>
+        <script src="/src/code/eigth.js"></script>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="./src/code/"></script>
+</body>
 </html>

@@ -15,7 +15,7 @@
 .left-blocks {
   display: flex;
   flex-direction: column;
-  margin-left: 240px; /* Зазор между блоками слева и справа */
+  margin-left: 20px; /* Зазор между блоками слева и справа */
 }
 
 .left-block {
@@ -38,6 +38,11 @@
   text-align: center;
   font-size: 25px;
 }
+.left-img{
+  margin-left: 250px;
+}
+
+
 
 
 

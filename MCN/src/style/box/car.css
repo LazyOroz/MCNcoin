@@ -12,7 +12,7 @@
   .left-cars {
     display: flex;
     flex-direction: column;
-    margin-left: 240px; /* Зазор между блоками слева и справа */
+    margin-left: 20px; /* Зазор между блоками слева и справа */
   }
   
   .left-car {
@@ -29,6 +29,22 @@
     margin-left: 10px;
     padding: 10px;
     color: #fff;
+  }
+  .fifth-img{
+    margin-left: 250px;
+  }
+  .ikonka{
+    margin-top: 48px;
+    text-align: center;
+  }
+  .puti{
+    color: #5ED67E;
+    font-family: roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
   }
   
   

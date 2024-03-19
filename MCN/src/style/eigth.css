@@ -1,0 +1,21 @@
+
+.accardion-header{
+    color: #fff;
+}
+
+.accardion-bottom {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.3s ease;
+    color: #fff;
+   }
+   
+   .accardion-content {
+    overflow: hidden;
+   }
+   
+   .accardion-bottom-active {
+    grid-template-rows: 1fr;
+    padding-top: 10px;
+   }
+   

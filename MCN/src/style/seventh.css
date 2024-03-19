@@ -1,0 +1,87 @@
+.info-block {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between; /* Располагаем блоки слева и справа */
+    align-items: center;
+    padding: 20px;
+    flex-direction: row; /* Горизонтальное расположение блоков */
+    color: white;
+  }
+
+  .left-sev {
+    margin-top: -200px;
+    width: 447px; /* Ширина блока слева */
+    height: 200px; /* Высота блока */
+    background-color: rgba(0, 128, 0, 0); /* Цвет фона блока слева */
+    margin-left: 250px;
+  }
+  .sev{
+    width: 447px; /* Ширина блока слева */
+    height: 133px; /* Высота блока */
+  }
+
+  .kjkj {
+    display: flex;
+    flex-direction: row; /* Горизонтальное расположение блоков внутри правого блока */
+    margin-right: 50px;
+  }
+
+  .klkl {
+    width: calc(55% - 5px); /* Ширина блока справа (50% минус половина зазора) */
+    height: 406px; /* Высота блока */
+    width: 304px;
+    background-color: rgb(102, 102, 102); /* Цвет фона блока справа */
+    margin-left: 10px; /* Зазор между блоками справа */
+  }
+  .kochevniki{
+    font-size: 32px;
+  }
+  .sev{
+    font-size: 20px;
+  }
+
+
+
+
+
+  .eit-block {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between; /* Располагаем блоки слева и справа */
+    align-items: center;
+    padding: 20px;
+    flex-direction: row; /* Горизонтальное расположение блоков */
+    color: white;
+  }
+
+  .left-eit {
+    margin-top: -200px;
+    width: 447px; /* Ширина блока слева */
+    height: 200px; /* Высота блока */
+    background-color: rgba(0, 128, 0, 0); /* Цвет фона блока слева */
+    margin-left: 250px;
+  }
+  .eit{
+    width: 447px; /* Ширина блока слева */
+    height: 133px; /* Высота блока */
+  }
+
+  .gogo {
+    display: flex;
+    flex-direction: row; /* Горизонтальное расположение блоков внутри правого блока */
+    margin-right: 50px;
+  }
+
+  .kiki {
+    width: calc(55% - 5px); /* Ширина блока справа (50% минус половина зазора) */
+    height: 406px; /* Высота блока */
+    width: 304px;
+    background-color: rgb(102, 102, 102); /* Цвет фона блока справа */
+    margin-left: 10px; /* Зазор между блоками справа */
+  }
+  .kochevnikii{
+    font-size: 32px;
+  }
+  .eit{
+    font-size: 20px;
+  }
